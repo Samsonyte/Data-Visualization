@@ -343,7 +343,7 @@ TextMesh:
   m_GameObject: {fileID: 96820507}
   m_Text: 'Summit
 
-    8,848 m'
+    8,849 m'
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -1850,7 +1850,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1512365959}
-  m_Text: 'Base Camp
+  m_Text: 'Camp 4
 
     7925 m'
   m_OffsetZ: 0
