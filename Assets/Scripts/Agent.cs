@@ -31,7 +31,6 @@ public class Agent : MonoBehaviour
             agent.SetDestination(camp4.position);
         }else {
             agent.SetDestination(summit.position);
-        }    
-       
+        }
     }
 }

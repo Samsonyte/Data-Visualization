@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnitEngine.AI;
+using UnityEngine.AI;
 
 public class Spawner : MonoBehaviour
 {
@@ -17,7 +17,21 @@ public class Spawner : MonoBehaviour
 
     void Update(){
     if(number<1286){
-    Instantiate(over0, new Vector3(-4, 0, -2.5f), Quaternion.identity);
+      if(members[number]>50){
+       Instantiate(over50, new Vector3(-4, 0, -2.5f), Quaternion.identity);
+      }else if(members[number]>20){
+       Instantiate(over20, new Vector3(-4, 0, -2.5f), Quaternion.identity);
+      }else if(members[number]>10){
+      Instantiate(over10, new Vector3(-4, 0, -2.5f), Quaternion.identity);
+      }else if(members[number]>50){
+       Instantiate(over5, new Vector3(-4, 0, -2.5f), Quaternion.identity);
+      }else if(members[number]>5){
+       Instantiate(over50, new Vector3(-4, 0, -2.5f), Quaternion.identity);
+      }else if(members[number]>1){
+        Instantiate(over1, new Vector3(-4, 0, -2.5f), Quaternion.identity);
+      }else {
+        Instantiate(over0, new Vector3(-4, 0, -2.5f), Quaternion.identity);
+      }
       number++;
     }
     }
