@@ -33,4 +33,10 @@ public class Agent : MonoBehaviour
             agent.SetDestination(summit.position);
         }
     }
+    void Update()
+    {
+        if(agent.destination.x-this.transform.position.x<.5){
+            Destroy(gameObject,10);
+        }
+    }
 }

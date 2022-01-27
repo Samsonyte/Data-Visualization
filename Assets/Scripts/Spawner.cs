@@ -23,29 +23,35 @@ public class Spawner : MonoBehaviour
     void Start(){
       nextTime=speed;
       expNumber=-1;
-      agents = new GameObject[1286];
+      agents = new GameObject[1285];
     }
 
     void Update(){
     totTime += Time.deltaTime;
-    if(totTime>=nextTime & expNumber<1286){
+    if(totTime>=nextTime & expNumber<1285){
       nextTime+=speed;
       expNumber++;
       if(members[expNumber]>50){
         agents[expNumber] = Instantiate(over50, new Vector3(-4, 0, -2.5f), Quaternion.identity);
-        //agents[expNumber].expedition=expNumber;
+        agents[expNumber].GetComponent<Agent>().expedition=expNumber;
       }else if(members[expNumber]>20){
         agents[expNumber] = Instantiate(over20, new Vector3(-4, 0, -2.5f), Quaternion.identity);
+        agents[expNumber].GetComponent<Agent>().expedition=expNumber;
       }else if(members[expNumber]>10){
          agents[expNumber] = Instantiate(over10, new Vector3(-4, 0, -2.5f), Quaternion.identity);
+         agents[expNumber].GetComponent<Agent>().expedition=expNumber;
       }else if(members[expNumber]>50){
         agents[expNumber] = Instantiate(over5, new Vector3(-4, 0, -2.5f), Quaternion.identity);
+        agents[expNumber].GetComponent<Agent>().expedition=expNumber;
       }else if(members[expNumber]>5){
          agents[expNumber] = Instantiate(over50, new Vector3(-4, 0, -2.5f), Quaternion.identity);
+         agents[expNumber].GetComponent<Agent>().expedition=expNumber;
       }else if(members[expNumber]>1){
         agents[expNumber] = Instantiate(over1, new Vector3(-4, 0, -2.5f), Quaternion.identity);
+        agents[expNumber].GetComponent<Agent>().expedition=expNumber;
       }else {
         agents[expNumber] = Instantiate(over0, new Vector3(-4, 0, -2.5f), Quaternion.identity);
+        agents[expNumber].GetComponent<Agent>().expedition=expNumber;
       }
     }
     }
